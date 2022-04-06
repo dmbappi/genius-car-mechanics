@@ -1,14 +1,11 @@
 import './App.css';
-import Expert from './Pages/Home/Expert/Expert';
-import Experts from './Pages/Home/Experts/Experts';
-import Services from './Pages/Home/Services/Services';
+import Home from './Pages/Home/Home/Home';
 
 function App() {
   return (
     <div className="App">
       
-    <Services></Services>
-    <Experts/>
+    <Home/>
       
     </div>
   );
