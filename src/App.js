@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import Booking from './Pages/Booking/Booking/Booking';
+import Login from './Pages/Login/Login/Login';
 function App() {
   return (
     <>
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
             </Route>
             <Route path="/booking/:serviceId">
               <Booking></Booking>
