@@ -4,6 +4,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import Booking from './Pages/Booking/Booking/Booking';
 function App() {
   return (
     <>
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/booking/:serviceId">
+              <Booking></Booking>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
