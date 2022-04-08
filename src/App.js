@@ -6,6 +6,9 @@ import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import Booking from './Pages/Booking/Booking/Booking';
 import Login from './Pages/Login/Login/Login';
+import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Header from './Pages/Shared/Header/Header';
 function App() {
   return (
     <>
@@ -17,7 +20,9 @@ function App() {
       </Routes> */}
 
       
+        <AuthProvider>
         <Router>
+          <Header></Header>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -28,15 +33,16 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/booking/:serviceId">
+            <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>
 
           </Switch>
         </Router>
+        </AuthProvider>
       
       {/* </BrowserRouter> */}
     
